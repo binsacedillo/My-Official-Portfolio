@@ -1,0 +1,14 @@
+.image-container {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+
+.profile-picture {
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover .profile-picture {
+    transform: scale(1.3);
+}

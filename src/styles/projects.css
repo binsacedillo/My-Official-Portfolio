@@ -1,0 +1,15 @@
+.hover-button {
+    background: #ffc156;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.hover-button:hover {
+    background: #b18d4e;
+}
