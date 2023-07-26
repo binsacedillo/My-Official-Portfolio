@@ -1,5 +1,6 @@
 import '../styles/projects.css';
 import newswebsite from '../images/newswebsite.png';
+import japwebsite from '../images/japaneselangwebsite.jpg';
 
 const ProjectSection = () => {
   const projects = [
@@ -7,13 +8,13 @@ const ProjectSection = () => {
       title: 'News Website',
       description: 'A simple responsive news website that uses a responsive nav bar and react-responsive-carousel for the breaking news section and simple list of latest news and a load more button to show more news and you can revert it back to see less and a search box and to finish it all up is a simple responsive footer.',
       image: newswebsite,
-      link: 'https://example.com/project1',
+      link: 'https://github.com/binsacedillo/newsWebsite',
     },
     {
-      title: 'Project 2',
-      description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      image: 'project2.png',
-      link: 'https://example.com/project2',
+      title: 'Japanese Language Learning Website',
+      description: 'A simple responsive Japanese Language Learning website that uses a responsive nav bar and react-router-dom for the nav links that links to other pages and a translation button that changes the texts in the nav bar from English to Japanese.',
+      image: japwebsite,
+      link: 'https://github.com/binsacedillo/JapLanguageLearningWebsite',
     },
     {
       title: 'Project 3',
@@ -31,7 +32,7 @@ const ProjectSection = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="p-6 rounded shadow-md border border-gray-200 transition-transform duration-300 transform hover:scale-105"
+              className="p-6 rounded shadow-md border border-gray-200 transition-transform duration-300 transform sm:hover:scale-105"
               style={{ textDecoration: 'none' }}
             >
               <h3 className="text-xl font-bold mb-2">{project.title}</h3>
@@ -47,7 +48,7 @@ const ProjectSection = () => {
                 rel="noopener noreferrer"
                 className="hover-button"
               >
-                View Project
+                View Project Source Code
               </a>
             </div>
           ))}
