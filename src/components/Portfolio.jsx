@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons';
 import image1 from '../images/me.jpg';
 import RandomTextAnimation from './RandomTextAnimation';
 
