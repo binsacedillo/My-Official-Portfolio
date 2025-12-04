@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
-import profilePicture from '../images/aboutme.jpg';
+import profilePicture from '../images/aboutme.png';
 import '../styles/aboutme.css';
 
 const aboutMeData = {
   title: 'About Me',
   paragraphs: [
-    "Hi there, I'm Vince Gio Acedillo, a motivated student who is passionate about front-end web development. I'm always seeking to expand my knowledge and skills in this field. My main focus is on front-end coding, and I strive to continuously improve my abilities and gain practical, hands-on experience in the ever-evolving world of web technology.",
-    "I have experience working with key front-end languages like HTML and CSS, and I'm currently sharpening my React website-building skills. In addition, I'm familiar with innovative frameworks such as SASS, Tailwind CSS, and React, and I plan to specialize in these areas through further practice and projects.",
-    "My goal is to continue learning and mastering the industry-relevant skills necessary to turn my theoretical knowledge into real-world web solutions. I'm excited to embark on this journey with an unwavering passion for growth and development.",
+    "Hi there, I'm Vince Gio N. Acedillo, a motivated student aspiring to become a Full Stack Web Developer. I'm always seeking to expand my knowledge beyond the browser. My main focus is on the modern JavaScript ecosystem, and I strive to continuously improve my abilities and gain practical, hands-on experience in the ever-evolving world of web technology.",
+    "I have a solid background in key languages like HTML and CSS, and I'm currently sharpening my skills in React and Next.js, powered by Vite. In addition to front-end styling with Tailwind CSS, I have acquired decent knowledge of database connections, and I am actively applying these full-stack concepts through new projects.",
+    "My goal is to continue learning and mastering the industry-relevant skills necessary to turn my theoretical knowledge into functional, data-driven web solutions. I'm excited to embark on this journey with an unwavering passion for growth and development.",
   ],
 };
 

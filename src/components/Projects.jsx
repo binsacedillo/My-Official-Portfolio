@@ -1,8 +1,32 @@
+import { useEffect } from 'react';
 import '../styles/projects.css';
 import newswebsite from '../images/newswebsite.png';
 import japwebsite from '../images/japaneselangwebsite.jpg';
+import googleclone from '../images/googleclone.jpg';
+import idolwebsite from '../images/idolwebsite.png';
 
 const ProjectSection = () => {
+  useEffect(() => {
+    const handleContextMenu = (event) => {
+      event.preventDefault(); // Prevent right-click context menu
+    };
+
+    const handleKeyDown = (event) => {
+      if (event.ctrlKey && event.key === 'u') {
+        event.preventDefault(); // Prevent Ctrl+U
+      }
+    };
+
+    document.addEventListener('contextmenu', handleContextMenu);
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('contextmenu', handleContextMenu);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
+
   const projects = [
     {
       title: 'News Website',
@@ -17,10 +41,16 @@ const ProjectSection = () => {
       link: 'https://github.com/binsacedillo/JapLanguageLearningWebsite',
     },
     {
-      title: 'Project 3',
-      description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
-      image: 'project3.png',
-      link: 'https://example.com/project3',
+      title: 'Google Clone Website',
+      description: 'Clone of the Google Website using styled components library and fully responsive to all screen sizes',
+      image: googleclone,
+      link: 'https://github.com/binsacedillo/googleClone',
+    },
+    {
+      title: 'Idol Group Website',
+      description: 'A responsive website using styled components library and using react router for linking to different pages in the website.',
+      image: idolwebsite,
+      link: 'https://github.com/binsacedillo/IdolWebsite',
     },
   ];
 

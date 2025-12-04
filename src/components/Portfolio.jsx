@@ -1,9 +1,30 @@
+import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons';
 import image1 from '../images/me.jpg';
 import RandomTextAnimation from './RandomTextAnimation';
 
 const Portfolio = () => {
+  useEffect(() => {
+    const handleContextMenu = (event) => {
+      event.preventDefault(); // Prevent right-click context menu
+    };
+
+    const handleKeyDown = (event) => {
+      if (event.ctrlKey && event.key === 'u') {
+        event.preventDefault(); // Prevent Ctrl+U
+      }
+    };
+
+    document.addEventListener('contextmenu', handleContextMenu);
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('contextmenu', handleContextMenu);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   const handleButtonClick = () => {
     window.scrollTo({
       top: window.innerHeight,
@@ -27,11 +48,11 @@ const Portfolio = () => {
                 VINCE GIO ACEDILLO
               </h1>
               <p className="text-sm">
-                STUDENT FRONT END WEB DEVELOPER
+                STUDENT FULL STACK WEB DEVELOPER
               </p>
               <div className="flex justify-center sm:justify-start mt-4">
-               <a
-                  href="https://www.linkedin.com/in/your_linkedin_username"
+                <a
+                  href="https://www.facebook.com/binsAced"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mr-4 text-white hover:text-yellow-400"
@@ -39,15 +60,7 @@ const Portfolio = () => {
                   <FontAwesomeIcon icon={faFacebook} size="lg" />
                 </a>
                 <a
-                  href="https://twitter.com/your_twitter_username"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mr-4 text-white hover:text-yellow-400"
-                >
-                  <FontAwesomeIcon icon={faTwitter} size="lg" />
-                </a>
-                <a
-                  href="https://github.com/your_github_username"
+                  href="https://github.com/binsacedillo"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white hover:text-yellow-400"
