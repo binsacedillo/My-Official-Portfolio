@@ -1,32 +1,19 @@
-import { useEffect } from 'react';
 import '../styles/projects.css';
 import newswebsite from '../images/newswebsite.png';
 import japwebsite from '../images/japaneselangwebsite.jpg';
 import googleclone from '../images/googleclone.jpg';
 import idolwebsite from '../images/idolwebsite.png';
 
+/**
+ * ProjectSection Component
+ * 
+ * Displays project portfolio as a responsive grid with consistent card heights.
+ * ISO 9241-112 Compliance:
+ * - Consistent card heights (h-full) ensure visual alignment across varying description lengths
+ * - Flex layout (flex flex-col) ensures CTA buttons align to bottom for consistent UX
+ * - Button sizing follows Fitts's Law for easier mobile/desktop clicking
+ */
 const ProjectSection = () => {
-  useEffect(() => {
-    const handleContextMenu = (event) => {
-      event.preventDefault(); // Prevent right-click context menu
-    };
-
-    const handleKeyDown = (event) => {
-      if (event.ctrlKey && event.key === 'u') {
-        event.preventDefault(); // Prevent Ctrl+U
-      }
-    };
-
-    document.addEventListener('contextmenu', handleContextMenu);
-    document.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      document.removeEventListener('contextmenu', handleContextMenu);
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
-
-
   const projects = [
     {
       title: 'News Website',
@@ -62,7 +49,7 @@ const ProjectSection = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="p-6 rounded shadow-md border border-gray-200 transition-transform duration-300 transform sm:hover:scale-105"
+              className="p-6 rounded shadow-md border border-gray-200 transition-transform duration-300 transform sm:hover:scale-105 flex flex-col h-full"
               style={{ textDecoration: 'none' }}
             >
               <h3 className="text-xl font-bold mb-2">{project.title}</h3>
@@ -71,12 +58,12 @@ const ProjectSection = () => {
                 alt={project.title}
                 className="w-full mb-4 border border-gray-200 rounded"
               />
-              <p className="mb-4">{project.description}</p>
+              <p className="mb-4 flex-grow">{project.description}</p>
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover-button"
+                className="hover-button-lg"
               >
                 View Project Source Code
               </a>

@@ -1,3 +1,8 @@
+/* 
+ * ISO 9241-112: Principles of Information Presentation
+ * Fitts's Law compliance: Larger touch targets improve usability
+ */
+
 .hover-button {
     background: #ffc156;
     color: #FFFFFF;
@@ -12,4 +17,35 @@
 
 .hover-button:hover {
     background: #b18d4e;
+}
+
+/* Larger button variant for improved Fitts's Law compliance */
+.hover-button-lg {
+    background: #ffc156;
+    color: #FFFFFF;
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out, transform 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+.hover-button-lg:hover {
+    background: #b18d4e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile responsiveness: Increase button size for easier tapping */
+@media (max-width: 768px) {
+    .hover-button-lg {
+        padding: 16px 32px;
+        font-size: 17px;
+        width: 100%;
+        text-align: center;
+    }
 }
