@@ -23,10 +23,10 @@ const Portfolio = () => {
               <h1 className="text-3xl lg:text-6xl font-bold" style={{ color: '#FFCB74' }}>
                 <RandomTextAnimation text="ヴィンス ジオ アセディリョ" />
               </h1>
-              <h1 className="text-xl lg:text-xl font-medium">
+              <h1 className="text-xl lg:text-xl font-medium text-white">
                 VINCE GIO ACEDILLO
               </h1>
-              <p className="text-sm">
+              <p className="text-sm text-gray-300">
                 STUDENT FULL STACK WEB DEVELOPER
               </p>
               <div className="flex justify-center sm:justify-start mt-4">
@@ -34,6 +34,7 @@ const Portfolio = () => {
                   href="https://www.facebook.com/binsAced"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Visit my Facebook Profile"
                   className="mr-4 text-white hover:text-yellow-400"
                 >
                   <FontAwesomeIcon icon={faFacebook} size="lg" />
@@ -42,6 +43,7 @@ const Portfolio = () => {
                   href="https://github.com/binsacedillo"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Visit my GitHub Profile"
                   className="text-white hover:text-yellow-400"
                 >
                   <FontAwesomeIcon icon={faGithub} size="lg" />
