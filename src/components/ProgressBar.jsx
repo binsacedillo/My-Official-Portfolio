@@ -31,7 +31,6 @@ const ProgressBar = () => {
       progress={progress}
       color="gold"
       height={3}
-      onLoaderFinished={() => setProgress(0)}
     />
   );
 };

@@ -1,30 +1,9 @@
-import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faGithub } from '@fortawesome/free-brands-svg-icons';
 import image1 from '../images/me.jpg';
 import RandomTextAnimation from './RandomTextAnimation';
 
 const Portfolio = () => {
-  useEffect(() => {
-    const handleContextMenu = (event) => {
-      event.preventDefault(); // Prevent right-click context menu
-    };
-
-    const handleKeyDown = (event) => {
-      if (event.ctrlKey && event.key === 'u') {
-        event.preventDefault(); // Prevent Ctrl+U
-      }
-    };
-
-    document.addEventListener('contextmenu', handleContextMenu);
-    document.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      document.removeEventListener('contextmenu', handleContextMenu);
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
-
   const handleButtonClick = () => {
     window.scrollTo({
       top: window.innerHeight,

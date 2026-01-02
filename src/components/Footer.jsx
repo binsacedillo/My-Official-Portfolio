@@ -1,26 +1,4 @@
-import { useEffect } from 'react';
-
 const Footer = () => {
-  useEffect(() => {
-    const handleContextMenu = (event) => {
-      event.preventDefault(); // Prevent right-click context menu
-    };
-
-    const handleKeyDown = (event) => {
-      if (event.ctrlKey && event.key === 'u') {
-        event.preventDefault(); // Prevent Ctrl+U
-      }
-    };
-
-    document.addEventListener('contextmenu', handleContextMenu);
-    document.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      document.removeEventListener('contextmenu', handleContextMenu);
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
-
   return (
     <footer className="bg-gray-900">
       <div className="max-w-6xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
