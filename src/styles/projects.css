@@ -23,15 +23,16 @@
 .hover-button-lg {
     background: #ffc156;
     color: #FFFFFF;
-    padding: 14px 28px;
+    padding: 12px 24px;
     border-radius: 4px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: inline-block;
     text-decoration: none;
     transition: background-color 0.2s ease-in-out, transform 0.15s ease-in-out;
     cursor: pointer;
+    text-align: center;
 }
 
 .hover-button-lg:hover {
@@ -43,9 +44,7 @@
 /* Mobile responsiveness: Increase button size for easier tapping */
 @media (max-width: 768px) {
     .hover-button-lg {
-        padding: 16px 32px;
-        font-size: 17px;
-        width: 100%;
-        text-align: center;
+        padding: 14px 28px;
+        font-size: 16px;
     }
 }
