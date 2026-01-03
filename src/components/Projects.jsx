@@ -3,6 +3,7 @@ import newswebsite from '../images/newswebsite.png';
 import japwebsite from '../images/japaneselangwebsite.jpg';
 import googleclone from '../images/googleclone.jpg';
 import idolwebsite from '../images/idolwebsite.png';
+import pilothandbook from '../images/pilothandbook.jpg';
 
 /**
  * ProjectSection Component
@@ -40,9 +41,9 @@ const ProjectSection = () => {
       link: 'https://github.com/binsacedillo/IdolWebsite',
     },
     {
-      title: 'Project Title Placeholder',
-      description: 'Project description placeholder. Add your project details here.',
-      image: newswebsite,
+      title: 'Pilot Handbook - Aviation Management Platform',
+      description: 'A pilot logbook management application using Next.js with TypeScript, tRPC for API communication, Prisma with PostgreSQL for data persistence, Clerk authentication, and Tailwind CSS for responsive styling across all devices.',
+      image: pilothandbook,
       link: '#',
     },
   ];
