@@ -17,16 +17,11 @@ import pilothandbook from '../images/pilothandbook.jpg';
 const ProjectSection = () => {
   const projects = [
     {
-      title: 'News Website',
-      description: 'A simple responsive news website that uses a responsive nav bar and react-responsive-carousel for the breaking news section and simple list of latest news and a load more button to show more news and you can revert it back to see less and a search box and to finish it all up is a simple responsive footer.',
-      image: newswebsite,
-      link: 'https://github.com/binsacedillo/newsWebsite',
-    },
-    {
-      title: 'Japanese Language Learning Website',
-      description: 'A simple responsive Japanese Language Learning website that uses a responsive nav bar and react-router-dom for the nav links that links to other pages and a translation button that changes the texts in the nav bar from English to Japanese.',
-      image: japwebsite,
-      link: 'https://github.com/binsacedillo/JapLanguageLearningWebsite',
+      title: 'Pilot Handbook - Aviation Management Platform',
+      description: 'A pilot logbook management application using Next.js with TypeScript, tRPC for API communication, Prisma with PostgreSQL for data persistence, Clerk authentication, and Tailwind CSS for responsive styling across all devices.',
+      image: pilothandbook,
+      sourceCodeLink: 'https://github.com/binsacedillo/pilot-handbook',
+      projectLink: 'https://pilot-handbook.vercel.app/',
     },
     {
       title: 'Google Clone Website',
@@ -41,10 +36,16 @@ const ProjectSection = () => {
       link: 'https://github.com/binsacedillo/IdolWebsite',
     },
     {
-      title: 'Pilot Handbook - Aviation Management Platform',
-      description: 'A pilot logbook management application using Next.js with TypeScript, tRPC for API communication, Prisma with PostgreSQL for data persistence, Clerk authentication, and Tailwind CSS for responsive styling across all devices.',
-      image: pilothandbook,
-      link: '#',
+      title: 'Japanese Language Learning Website',
+      description: 'A simple responsive Japanese Language Learning website that uses a responsive nav bar and react-router-dom for the nav links that links to other pages and a translation button that changes the texts in the nav bar from English to Japanese.',
+      image: japwebsite,
+      link: 'https://github.com/binsacedillo/JapLanguageLearningWebsite',
+    },
+    {
+      title: 'News Website',
+      description: 'A simple responsive news website that uses a responsive nav bar and react-responsive-carousel for the breaking news section and simple list of latest news and a load more button to show more news and you can revert it back to see less and a search box and to finish it all up is a simple responsive footer.',
+      image: newswebsite,
+      link: 'https://github.com/binsacedillo/newsWebsite',
     },
   ];
 
@@ -66,14 +67,28 @@ const ProjectSection = () => {
                 className="w-full mb-4 border border-gray-200 rounded"
               />
               <p className="mb-4 flex-grow">{project.description}</p>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover-button-lg"
-              >
-                View Project Source Code
-              </a>
+              <div className="flex gap-3 flex-wrap">
+                {(project.sourceCodeLink || project.link) && (
+                  <a
+                    href={project.sourceCodeLink || project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover-button-lg"
+                  >
+                    Source Code
+                  </a>
+                )}
+                {project.projectLink && (
+                  <a
+                    href={project.projectLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover-button-lg"
+                  >
+                    View Project
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>
