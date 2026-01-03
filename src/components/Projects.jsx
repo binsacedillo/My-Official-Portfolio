@@ -39,6 +39,12 @@ const ProjectSection = () => {
       image: idolwebsite,
       link: 'https://github.com/binsacedillo/IdolWebsite',
     },
+    {
+      title: 'Project Title Placeholder',
+      description: 'Project description placeholder. Add your project details here.',
+      image: newswebsite,
+      link: '#',
+    },
   ];
 
   return (
